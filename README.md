@@ -33,7 +33,7 @@ Example: Adding user/user group/all to repo configuration
 
 ## License
 
-dtk-server is copyright (C) 2010-2016 dtk contributors
+dtk-common is copyright (C) 2010-2016 dtk contributors
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this work except in compliance with the License.
