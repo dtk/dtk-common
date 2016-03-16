@@ -1,12 +1,35 @@
 PATH
   remote: .
   specs:
-    dtk-common (0.1.10)
+    dtk-common (0.9.0)
+      colorize (~> 0.5.8)
+      docker-api (~> 1.26)
+      dtk-common-core (= 0.9.0)
+      erubis (~> 2.7)
+      grit (~> 2.5)
       rugged (~> 0.17.0.b7)
 
 GEM
   remote: http://rubygems.org/
   specs:
+    colorize (0.5.8)
+    diff-lcs (1.2.5)
+    docker-api (1.26.2)
+      excon (>= 0.38.0)
+      json
+    dtk-common-core (0.9.0)
+      rest-client (= 1.6.7)
+    erubis (2.7.0)
+    excon (0.45.4)
+    grit (2.5.0)
+      diff-lcs (~> 1.1)
+      mime-types (~> 1.15)
+      posix-spawn (~> 0.3.6)
+    json (1.8.3)
+    mime-types (1.25.1)
+    posix-spawn (0.3.8)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rugged (0.17.0.b7)
 
 PLATFORMS
@@ -14,3 +37,6 @@ PLATFORMS
 
 DEPENDENCIES
   dtk-common!
+
+BUNDLED WITH
+   1.10.6
