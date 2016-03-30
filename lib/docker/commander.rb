@@ -40,7 +40,7 @@ module DTK
 
         FileUtils.mkdir_p output_dir_tmp
         # make sure dtkyaml reporter is available to puppet
-        FileUtils.ln_sf '/usr/share/dtk/dtk-arbiter/dtkyaml', '/etc/puppet/modules/dtkyaml'
+        FileUtils.ln_sf '/usr/share/dtk/dtk-arbiter/dtkyaml', '/etc/puppet/modules/dtkyaml' unless File.exist? '/etc/puppet/modules/dtkyaml'
         # write puppet manifest
         File.open("#{output_dir}/manifest.pp", 'w') { |file| file.write(@puppet_manifest) }
         # make sure r8 module is available
