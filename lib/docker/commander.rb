@@ -7,12 +7,13 @@ module DTK
 
       include Common::Open3
 
-      def initialize(docker_image, docker_command, puppet_manifest, execution_type, dockerfile)
+      def initialize(docker_image, docker_command, puppet_manifest, execution_type, dockerfile, workdir = '/usr/share/dtk/docker-worker')
         @docker_image = docker_image
         @docker_command = docker_command
         @dockerfile = dockerfile
         @puppet_manifest = puppet_manifest
         @execution_type = execution_type
+        @workdir = workdir
 
         unless ::Docker::Image.exist?(docker_image) && !@dockerfile
           Log.info "Getting docker image '#{docker_image}', this may take a while"
@@ -30,7 +31,7 @@ module DTK
       def run
         # require 'debugger'; debugger
         docker_container_name = "dtk#{Time.now.to_i}"
-        output_dir = "/usr/share/dtk/docker-worker/#{docker_container_name}"
+        output_dir = "#{@workdir}/#{docker_container_name}"
         output_dir_tmp = "#{output_dir}/tmp"
         output_dir_container = "/host_volume"
         output_file = "#{output_dir}/report.yml"
