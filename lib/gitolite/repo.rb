@@ -54,10 +54,8 @@ module Gitolite
 
     end
 
-    def initialize(repo_name, configuration_, logger_, gitolite_path, gitolite_branch="master")
-      # IMPORTANT! Tenants user are always included with each module
-
-      @rights_hash = { 'R' => [], 'W' => [], 'RW' => ['@tenants'], 'RW+' => []}
+    def initialize(repo_name, configuration_, logger_, gitolite_path, gitolite_branch = 'master')
+      @rights_hash = { 'R' => [], 'W' => [], 'RW' => [], 'RW+' => []}
       @repo_name = repo_name
       @user_groups = []
       @commit_messages = []
