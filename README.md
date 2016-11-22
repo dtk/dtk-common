@@ -3,7 +3,7 @@ dtk-common
 
 What it is?
 ----------------------
-This is helper library used across DTK components (dtk-server, dtk-repo-manager). Since it is included as dependency on DTK components, there is no need for installing/configuring it separately. We use [Gitolite](https://github.com/sitaramc/gitolite) for fine-grained access control to our component and service modules. One of the functionalities that dtk-common exposes is interaction with Gitolite via Gitolite Manager. Below is an example why and how Gitolite manager is used.
+This is helper library used across Dtk components (dtk-server, dtk-repo-manager). Since it is included as dependency on Dtk components, there is no need for installing/configuring it separately. We use [Gitolite](https://github.com/sitaramc/gitolite) for fine-grained access control to our component and service modules. One of the functionalities that dtk-common exposes is interaction with Gitolite via Gitolite Manager. Below is an example why and how Gitolite manager is used.
 
 Gitolite manager usage
 ----------------------
