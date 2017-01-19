@@ -18,7 +18,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'rugged','~> 0.17.0.b7'
   gem.add_dependency 'dtk-common-core','0.10.1'
   gem.add_dependency 'colorize','~> 0.5.8'
-  gem.add_dependency 'docker-api', '~> 1.26'
   gem.add_dependency 'grit', '~> 2.5'
   gem.add_dependency 'erubis', '~> 2.7'
   # gem.add_dependency 'sequel','~> 3.40.0'
