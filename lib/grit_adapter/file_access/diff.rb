@@ -96,4 +96,4 @@ class DTK::Common::GritAdapter::FileAccess
       attr_writer(*Attributes) 
     end
   end
-end
+end

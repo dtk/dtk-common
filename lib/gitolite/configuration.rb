@@ -49,4 +49,4 @@ module Gitolite
       "#{@home_dir}/repositories/#{repo_name}.git"
     end 
   end
-end
+end
